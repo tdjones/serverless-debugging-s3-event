@@ -1,0 +1,153 @@
+service: debugging-serverless
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  helloevt:
+    handler: handler.hello
+    events:
+      - s3:
+          bucket: "testing-my-bucket-129758483911"
+          event: s3:ObjectCreated:*
+          existing: true
+  hello2:
+    handler: handler.hello
+  hello3:
+    handler: handler.hello
+  hello4:
+    handler: handler.hello
+  hello5:
+    handler: handler.hello
+  hello6:
+    handler: handler.hello
+  hello7:
+    handler: handler.hello
+  helloevt2:
+    handler: handler.hello
+    events:
+      - s3:
+          bucket: "testing-my-bucket-129758483922"
+          event: s3:ObjectCreated:*
+          existing: true
+  hello8:
+    handler: handler.hello
+  hello12:
+    handler: handler.hello
+  hello13:
+    handler: handler.hello
+  hello14:
+    handler: handler.hello
+  hello15:
+    handler: handler.hello
+  hello16:
+    handler: handler.hello
+  hello17:
+    handler: handler.hello
+  hello18:
+    handler: handler.hello
+  hello19:
+    handler: handler.hello
+  hello20:
+    handler: handler.hello
+  helloevt3:
+    handler: handler.hello
+    events:
+      - s3:
+          bucket: "testing-my-bucket-129758483933"
+          event: s3:ObjectCreated:*
+          existing: true
+  hello21:
+    handler: handler.hello
+  hello22:
+    handler: handler.hello
+  hello23:
+    handler: handler.hello
+  hello24:
+    handler: handler.hello
+  hello25:
+    handler: handler.hello
+  hello26:
+    handler: handler.hello
+  hello27:
+    handler: handler.hello
+  hello28:
+    handler: handler.hello
+  hello29:
+    handler: handler.hello
+  hello30:
+    handler: handler.hello
+  hello31:
+    handler: handler.hello
+  hello32:
+    handler: handler.hello
+  hello33:
+    handler: handler.hello
+  hello34:
+    handler: handler.hello
+  hello35:
+    handler: handler.hello
+  hello36:
+    handler: handler.hello
+  hello37:
+    handler: handler.hello
+  hello38:
+    handler: handler.hello
+  hello39:
+    handler: handler.hello
+  hello40:
+    handler: handler.hello
+  hello41:
+    handler: handler.hello
+  hello42:
+    handler: handler.hello
+  hello43:
+    handler: handler.hello
+  hello44:
+    handler: handler.hello
+  hello45:
+    handler: handler.hello
+  hello46:
+    handler: handler.hello
+  hello47:
+    handler: handler.hello
+  hello48:
+    handler: handler.hello
+  hello49:
+    handler: handler.hello
+  hello50:
+    handler: handler.hello
+  hello51:
+    handler: handler.hello
+  hello52:
+    handler: handler.hello
+  helloevt4:
+    handler: handler.hello
+    events:
+      - s3:
+          bucket: "testing-my-bucket-129758483944"
+          event: s3:ObjectCreated:*
+          existing: true
+
+# you can add CloudFormation resource templates here
+resources:
+  Resources:
+    NewResource:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: "testing-my-bucket-129758483911"
+    NewResource2:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: "testing-my-bucket-129758483922"
+    NewResource3:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: "testing-my-bucket-129758483933"
+    NewResource4:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: "testing-my-bucket-129758483944"
